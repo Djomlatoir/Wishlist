@@ -1,0 +1,30 @@
+html, body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+#canvasContainer {
+  width: 50%; /* Deli se na pola */
+  height: 100%;
+  display: block;
+  background-color: #ffffff; /* Postavite istu pozadinsku boju kao CV */
+}
+
+.text-input {
+  width: 50%; /* Deli se na pola */
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* Vertikalno raspoređivanje */
+  align-items: center; /* Horizontalno centriranje */
+  justify-content: flex-start; /* Pozicionira sadržaj od vrha */
+  padding: 20px; /* Dodaj padding oko sadržaja */
+  background-color: #fafafa; /* Pozadina za tekstualni unos */
+}
+
+/* Ostatak CSS-a ostaje isti */
