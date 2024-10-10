@@ -2,7 +2,7 @@ import { Component, AfterViewInit, ElementRef, ViewChild, model } from '@angular
 import { RouterOutlet } from '@angular/router';
 import * as THREE from 'three';
 
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 
 @Component({
@@ -39,13 +39,7 @@ export class AppComponent implements AfterViewInit {
     
     const loader = new GLTFLoader();
     
-    loader.load(".assets/untitled.gltf",(gltf)=>{
-      console.error('Ucitano');
-
-    }, undefined,(error)=>{
-      console.error('An error occurred while loading the model aa ',error);
-    }
-    );
+   
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(width, height);

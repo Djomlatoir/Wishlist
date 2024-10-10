@@ -1,6 +1,8 @@
 html, body {
   margin: 0;
   overflow: hidden;
+  font-family: Arial, sans-serif; /* Added a readable font */
+  background-color: #e9ecef; /* Subtle background color */
 }
 
 .container {
@@ -10,21 +12,66 @@ html, body {
 }
 
 #canvasContainer {
-  width: 50%; /* Deli se na pola */
-  height: 100%;
-  display: block;
-  background-color: #ffffff; /* Postavite istu pozadinsku boju kao CV */
+    width: 100%; /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
 }
 
 .text-input {
   width: 50%; /* Deli se na pola */
   height: 100%;
   display: flex;
-  flex-direction: column; /* Vertikalno raspoređivanje */
-  align-items: center; /* Horizontalno centriranje */
-  justify-content: flex-start; /* Pozicionira sadržaj od vrha */
-  padding: 20px; /* Dodaj padding oko sadržaja */
-  background-color: #fafafa; /* Pozadina za tekstualni unos */
+  flex-direction: column; /* Vertical arrangement */
+  align-items: center; /* Center align */
+  justify-content: flex-start; /* Align content from the top */
+  padding: 20px; /* Padding around content */
+  background-color: #fafafa; /* Light background for text input */
+  overflow-y: auto; /* Enable scrolling if content overflows */
 }
 
-/* Ostatak CSS-a ostaje isti */
+#header {
+  font-size: 2em; /* Larger font size for header */
+  margin-bottom: 20px; /* Spacing below header */
+  text-align: center; /* Center align */
+}
+
+.stuff {
+  width: 100%; /* Full width for content */
+}
+
+.head {
+  font-weight: bold; /* Bold headings */
+  margin-top: 15px; /* Spacing above headings */
+  font-size: 1.2em; /* Slightly larger font size */
+}
+
+ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+}
+
+ul li {
+  margin: 5px 0; /* Spacing between list items */
+}
+
+a {
+  color: #007bff; /* Bootstrap primary color */
+  text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+#footer {
+  margin-top: auto; /* Push footer to bottom */
+  text-align: center; /* Center align footer */
+}
+
+input[type="text"] {
+  margin-top: 20px; /* Spacing above input */
+  padding: 10px; /* Padding inside input */
+  border: 1px solid #ced4da; /* Light border for input */
+  border-radius: 5px; /* Rounded corners for input */
+  width: 100%; /* Full width for input */
+  font-size: 1em; /* Font size for input */
+}
