@@ -2,7 +2,7 @@ import { Component, AfterViewInit, ElementRef, ViewChild, model } from '@angular
 import { RouterOutlet } from '@angular/router';
 import * as THREE from 'three';
 
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 
 @Component({
