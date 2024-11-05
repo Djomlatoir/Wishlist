@@ -1,0 +1,25 @@
+footer {
+    background-color: #292929; /* Match the footer background with the header */
+    color: #e0e0e0; /* Light gray for footer text */
+    text-align: center; /* Center the footer text */
+    padding: 20px; /* Add padding for spacing */
+    position: relative; /* Keep it in the normal document flow */
+    bottom: 0; /* Ensure it's at the bottom of the page */
+    width: 100%; /* Full width */
+}
+
+footer p {
+    margin: 0; /* Remove default margin for paragraph */
+    font-size: 1em; /* Adjust font size as needed */
+}
+
+/* Optional: Add a hover effect or additional styles */
+footer a {
+    color: #ffb347; /* Link color for any additional links */
+    text-decoration: none; /* No underline */
+}
+
+footer a:hover {
+    color: #ffa07a; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
+}

@@ -1,6 +1,9 @@
 import { Component, AfterViewInit, ElementRef, ViewChild, model } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import * as THREE from 'three';
+import { HeaderComponent } from './header/header.component'; // Import HeaderComponent
+import { FooterComponent } from './footer/footer.component'; // Import FooterComponent
+
 
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
@@ -8,13 +11,13 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   providers: [{ provide: Window, useValue: window }]
 })
 export class AppComponent implements AfterViewInit {
-  title = 'Aaaa';
+  title = '3Dmodel';
   
   @ViewChild('canvasContainer', { static: true }) canvasContainer!: ElementRef;
 
@@ -25,7 +28,7 @@ export class AppComponent implements AfterViewInit {
     const height = this.canvasContainer.nativeElement.clientHeight;
 
     // init
-    const camera = new THREE.PerspectiveCamera(70, width / height, 0.01, 10);
+    const camera = new THREE.PerspectiveCamera(50, width / height, 0.01, 10);
     camera.position.z = 1;
 
     const scene = new THREE.Scene();
@@ -35,7 +38,7 @@ export class AppComponent implements AfterViewInit {
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
 
-
+    
     
     const loader = new GLTFLoader();
     
@@ -44,8 +47,8 @@ export class AppComponent implements AfterViewInit {
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(width, height);
     renderer.setAnimationLoop(animate);
-    renderer.setClearColor(0xf4f6f8, 1); // Ova linija postavlja pozadinsku boju renderer-a
-    scene.background = new THREE.Color(0xf4f6f8); // Ova linija postavlja pozadinsku boju scene
+    renderer.setClearColor(0x1c1c1c, 1); // Ova linija postavlja pozadinsku boju renderer-a
+    scene.background = new THREE.Color(0x1c1c1c); // Ova linija postavlja pozadinsku boju scene
 
     
     
@@ -54,8 +57,8 @@ export class AppComponent implements AfterViewInit {
 
     // animation
     function animate(time: number) {
-      mesh.rotation.x = time / 2000;
-      mesh.rotation.y = time / 1000;
+      mesh.rotation.x = time / 20000;
+      mesh.rotation.y = time / 10000;
       renderer.render(scene, camera);
     }
   }

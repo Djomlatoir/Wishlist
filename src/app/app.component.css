@@ -1,8 +1,8 @@
 html, body {
   margin: 0;
   overflow: hidden;
-  font-family: Arial, sans-serif; /* Added a readable font */
-  background-color: #e9ecef; /* Subtle background color */
+  font-family: Arial, sans-serif;
+  background-color: #1c1c1c; /* Dark gray for comfortable background */
 }
 
 .container {
@@ -12,66 +12,85 @@ html, body {
 }
 
 #canvasContainer {
-    width: 100%; /* Adjust as needed */
-    height: 100%; /* Adjust as needed */
+  width: 100%;
+  height: 100%;
 }
 
 .text-input {
-  width: 50%; /* Deli se na pola */
+  width: 50%;
   height: 100%;
   display: flex;
-  flex-direction: column; /* Vertical arrangement */
-  align-items: center; /* Center align */
-  justify-content: flex-start; /* Align content from the top */
-  padding: 20px; /* Padding around content */
-  background-color: #fafafa; /* Light background for text input */
-  overflow-y: auto; /* Enable scrolling if content overflows */
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  background-color: #292929; /* Dark background for text area */
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow */
 }
 
 #header {
-  font-size: 2em; /* Larger font size for header */
-  margin-bottom: 20px; /* Spacing below header */
-  text-align: center; /* Center align */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #e0e0e0;
+  text-shadow: 
+    1px 2px 0 #c40c0c, 
+    2px 5px 0 #c40c0c,
+    3px 6px 0 #7f07b3,
+    4px 7px 0 #7f07b3;
 }
 
 .stuff {
-  width: 100%; /* Full width for content */
+  width: 100%;
+  color: #d3d3d3;
 }
 
-.head {
-  font-weight: bold; /* Bold headings */
-  margin-top: 15px; /* Spacing above headings */
-  font-size: 1.2em; /* Slightly larger font size */
+.head,
+h1, /* Ensures headers like "Mladen Nedeljkovic", "About Me", etc. are styled */
+p.head { 
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: #e0e0e0; /* Matches main header color */
+  text-shadow: 
+    1px 2px 0 #c40c0c;
 }
 
 ul {
-  list-style-type: none; /* Remove default list styling */
-  padding: 0; /* Remove padding */
+  list-style-type: none;
+  padding: 0;
 }
 
 ul li {
-  margin: 5px 0; /* Spacing between list items */
+  margin: 5px 0;
+  color: #cccccc; /* Light gray for list items */
 }
 
 a {
-  color: #007bff; /* Bootstrap primary color */
-  text-decoration: none; /* Remove underline */
+  color: #ffb347; /* Bright orange for visibility */
+  font-weight: bold; /* Makes links stand out */
+  text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline; /* Underline on hover */
+  color: #ffa07a; /* Coral on hover */
+  text-decoration: underline;
 }
 
 #footer {
-  margin-top: auto; /* Push footer to bottom */
-  text-align: center; /* Center align footer */
+  margin-top: auto;
+  text-align: center;
+  color: #888888; /* Dark gray for footer text */
 }
 
 input[type="text"] {
-  margin-top: 20px; /* Spacing above input */
-  padding: 10px; /* Padding inside input */
-  border: 1px solid #ced4da; /* Light border for input */
-  border-radius: 5px; /* Rounded corners for input */
-  width: 100%; /* Full width for input */
-  font-size: 1em; /* Font size for input */
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #444444;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1em;
+  background-color: #333333;
+  color: #e0e0e0;
 }
